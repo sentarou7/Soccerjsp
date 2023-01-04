@@ -77,7 +77,7 @@ public class CheckUtil {
                 this._errs.add(name + "は正しい日付で入力してください。");
             }
             // }else{
-            // this._errs.add(name + "は日付形式で入力してください");
+            // this._errs.add(name + "は日付形式で入力してください。");
             // }
         }
     }
