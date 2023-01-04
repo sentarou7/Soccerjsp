@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <Context reloadable="true">
+        
+        <Realm className="org.apache.catalina.realm.DataSourceRealm"
+            dataSourceName="jdbc/Soccerjsp"
+            userTable="usr" userNameCol="uid" userCredCol="passwd"
+            userRoleTable="usr_role" roleNameCol="role"
+            localDataSource="true">
+            <!--<CredentialHandler className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+                algorithm="SHA-512" />
+                  -->
+        </Realm>
+        
+        <Resource name="jdbc/Soccerjsp" auth="Container" type="javax.sql.DataSource" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost/Soccerjsp" username="root" password="root12345" maxTotal="4" maxWaitMillis="5000" maxIdle="2" validationQuery="SELECT count(*) FROM players"></Resource>
+      
+       <!--  " <Valve className="org.apache.catalina.valves.AccessLogValve"
+        prefix="Soccerjsp." suffix=".log"
+        fileDateFormat="yyyy-MM" pattern="%t %U %T %a %b" /> -->
+       
+    </Context>
